@@ -8,6 +8,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Mepandes | Digital Bali Invitation</title>
 
+  <!-- bootstrap -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
   <!-- Bulma Version 0.8.x-->
   <link rel="stylesheet" href="https://unpkg.com/bulma@0.8.0/css/bulma.min.css" />
   <link rel="stylesheet" href="https://unpkg.com/bulma-tooltip@0.1.5/dist/bulma-tooltip.min.css" />
@@ -84,7 +88,7 @@
           <h1 class="subtitle">Undangan Mepandes</h1>
           <h2 class="title">Santina & Wulan</h2>
           <h4 class="subtitle tempatwaktu">
-            16.06.23
+            - 16.06.23 -
           </h4>
         </div>
         <!-- Start Countdown -->
@@ -234,19 +238,11 @@
       </div>
       <div class="container">
         <div class="column is-12 regular-section" data-aos="fade-up" data-aos-easing="linear">
-          <!-- <p class="tempat is-larger has-text-centered">
-              <strong>Br. Cangi, Desa Batuan Kaler</strong>
-              <br>
-              Jl. Batuan Kaler, Batuan Kaler, 
-              <br>
-              Kec. Sukawati, Kabupaten Gianyar, Bali
-              <br>
-            </p> -->
         </div>
         <div class="section-map" data-aos="fade-up" data-aos-easing="linear">
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3945.277959174785!2d115.27701121478341!3d-8.569249493840635!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zOMKwMzQnMDkuMyJTIDExNcKwMTYnNDUuMSJF!5e0!3m2!1sen!2sid!4v1686375336915!5m2!1sen!2sid"
-            width="100%" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+            width="100%" height="450" frameborder="5" style="border:0;" allowfullscreen=""></iframe>
         </div>
         <div class="space40px"></div>
         <div class="has-text-centered" data-aos="fade-up" data-aos-easing="linear">
@@ -298,16 +294,43 @@
     <!-- End RSVP Content -->
   </div>
   <!-- End Main Content -->
-
-  <!-- Begin Footer -->
-  <div class="footer">
-    <div class="container">
-      <a href="https://www.instagram.com/yoga_pramana19/" target="_blank" class="has-vertically-align">
-        <p class="has-vertically-align">2023 &copy Digital Bali Invitation</p>
-      </a>
-    </div>
+  <div id="audio-widget">
+    <button id="audio-button" onclick="toggleSound()">
+      <i class="fa fa-volume-up"></i>
+    </button>
+    <audio id="myAudio" autoplay loop>
+      <source src="audio/song.mp3" type="audio/mpeg">
+    </audio>
   </div>
-  <!-- End Footer -->
+
+  <script>
+    var audio = document.getElementById("myAudio");
+
+    function toggleSound() {
+      if (audio.paused) {
+        audio.play();
+      } else {
+        audio.pause();
+      }
+    }
+  </script>
+
+
+  <div class="footer-basic">
+    <footer>
+      <div class="social"><a href="#"><i class="icon ion-social-instagram"></i></a><a href="https://www.instagram.com/yoga_pramana19/"><i class="icon ion-social-snapchat"></i></a><a href="https://www.instagram.com/yoga_pramana19"><i class="icon ion-social-twitter"></i></a><a href="https://www.instagram.com/yoga_pramana19"><i class="icon ion-social-facebook"></i></a></div>
+            <ul class="list-inline">
+        <li class="list-inline-item"><a href="#">Home</a></li>
+        <li class="list-inline-item"><a href="#">Services</a></li>
+        <li class="list-inline-item"><a href="#">About</a></li>
+        <li class="list-inline-item"><a href="#">Terms</a></li>
+        <li class="list-inline-item"><a href="#">Privacy Policy</a></li>
+      </ul>
+      <p class="copyright">Digital Bali Invitation © 2023</p>
+    </footer>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
 
   <!-- Scripts -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
